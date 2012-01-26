@@ -27,9 +27,8 @@
      Feel free to modify this section or extend the application to include a login and register screen.
      This little piece of code will create a new user called Matt. If this user already exists, it will simply
      log Matt into the app. This is not the typical behaviour you would want, but it will allow you to play
-     with object relationships without haveing to worry too much about user management. To learn more about
-     the PFUser class take a look at the the PFUser tutorial here [PFUser tutorial link] as well as the 
-     documentation here https://www.parse.com/docs/ios_guide#users 
+     with object relationships without having to worry too much about user management. To learn more about
+     the PFUser class take a look at the documentation here https://www.parse.com/docs/ios_guide#users 
      */
     PFUser *user = [PFUser user];
     user.username = @"Matt";

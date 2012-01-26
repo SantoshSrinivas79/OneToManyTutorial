@@ -35,6 +35,11 @@
     [newPost setObject:[textView text] forKey:@"textContent"];
     [newPost setObject:[PFUser currentUser] forKey:@"author"]; // One-to-Many relationship created here!
     
+    //Set ACL permissions for added security
+    PFACL *postACL = [PFACL ACLWithUser:[PFUser currentUser]];
+    [postACL setPublicReadAccess:YES];
+    [newPost setACL:postACL];
+    
     // Save new Post object in Parse
     [newPost saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
